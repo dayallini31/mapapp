@@ -1,0 +1,55 @@
+{
+  "datasource": [
+    {
+      "id": "1",
+      "type": "JSON",
+      "name": "India",
+      "config": {
+        "source": "india.json"
+      },
+      "attri": ["name"]
+    },
+    {
+      "id": "2",
+      "type": "JSON",
+      "name": "WorldCities",
+      "config": {
+        "source": "worldCities.json"
+      },
+      "attri": ["ADMIN_NAME","CITY_NAME","CNTRY_NAME","FIPS_CNTRY","GMI_ADMIN","POP_CLASS","POP_RANK","PORT_ID","STATUS"]
+    },
+    {
+      "id": "4",
+      "type": "JSON",
+      "name": "IndiaDistricts",
+      "config": {
+        "source": "india_dist.json"
+      },
+     "attri": ["DISTRICT","DT_CEN_CD","ST_CEN_CD","ST_NM","censuscode"]
+    },
+    {
+      "id": "5",
+      "type": "JSON",
+      "name": "IndiaStates",
+      "config": {
+        "source": "India_States.json"
+      },
+     "attri": ["ST_NM"]
+    },
+    {
+      "id": "3",
+      "type": "WMS",
+      "name": "USA",
+      "config": {
+        "url": "https://ahocevar.com/geoserver/wms",
+        "params": {
+          "LAYERS": "topp:states",
+          "TILED": true
+        },
+        "serverType": "geoserver",
+		"crossOrigin": "anonymous"
+      },
+      "attri": ["STATE_NAME"]
+    }
+  ]
+}
